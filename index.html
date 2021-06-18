@@ -24,7 +24,7 @@
         document.getElementById("contact-form").addEventListener("submit", function (event) {
           event.preventDefault();
           // generate a five digit number for the contact_number variable
-          this.contact_number.value = (Math.random() * 100000) | 0;
+          // this.contact_number.value = (Math.random() * 100000) | 0;
           // these IDs from the previous steps
           emailjs.sendForm("contact_service", "contact_form", this).then(
             function () {
@@ -64,7 +64,7 @@
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-form">Contact</a></li>
             <!--<li><a href="#elements">Elements</a></li>-->
           </ul>
         </nav>
@@ -293,12 +293,12 @@
         </article>
 
         <!-- Contact -->
-        <article id="contact">
+        <article id="contact-form">
           <h2 class="major">Contact</h2>
           <h3>don't be a stranger, say hello!</h3>
           <br />
           <form method="post" action="#">
-            <input type="hidden" name="contact_number" />
+            <!-- <input type="hidden" name="contact_number" /> -->
             <div class="fields">
               <div class="field half">
                 <label for="name">Name</label>
@@ -306,7 +306,7 @@
               </div>
               <div class="field half">
                 <label for="email">Email</label>
-                <input type="email" name="user_email" id="email" />
+                <input type="email" name="user_email" />
               </div>
               <div class="field">
                 <label for="message">Message</label>
